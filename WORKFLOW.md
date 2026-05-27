@@ -21,6 +21,6 @@ Integrate all assets, implement animations, push to live URL, ready for TikTok/L
 
 ## Status
 - [x] Step 1 — Requirements bullet points
-- [ ] Step 2 — Design skill created
+- [x] Step 2 — Design skill created
 - [ ] Step 3 — Exploded view prompt finalized
 - [ ] Step 4 — Site live
