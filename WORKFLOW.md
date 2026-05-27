@@ -20,7 +20,7 @@ Craft the image/video generation prompt for the hero "exploded view" — a cinem
 Integrate all assets, implement animations, push to live URL, ready for TikTok/LinkedIn content.
 
 ## Status
-- [ ] Step 1 — Requirements bullet points
+- [x] Step 1 — Requirements bullet points
 - [ ] Step 2 — Design skill created
 - [ ] Step 3 — Exploded view prompt finalized
 - [ ] Step 4 — Site live
