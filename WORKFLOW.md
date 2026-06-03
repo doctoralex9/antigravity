@@ -22,7 +22,7 @@ Integrate all assets, implement scroll animations with GSAP, push to live URL, r
 ## Status
 - [x] Step 1 — Requirements bullet points
 - [x] Step 2 — Design skill created
-- [ ] Step 3 — Hero image generated
+- [x] Step 3 — Hero image generated
 - [ ] Step 4 — Site live
 
 ## Asset Strategy

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --white:         #FFFFFF;
+  --off-white:     #F8F6F2;
+  --aegean:        #0E3D6E;
+  --aegean-light:  #1A6BA0;
+  --sand:          #D9C9A8;
+  --terracotta:    #B5603A;
+  --text-primary:  #1A1A1A;
+  --text-muted:    #6B6B6B;
+  --overlay:       rgba(14, 61, 110, 0.35);
+
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+
+  --text-hero:     clamp(3.5rem, 8vw, 7rem);
+  --text-title:    clamp(2rem, 4vw, 3.5rem);
+  --text-subtitle: clamp(1.25rem, 2vw, 1.75rem);
+  --text-body:     1rem;
+  --text-label:    0.75rem;
+
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   2rem;
+  --space-lg:   4rem;
+  --space-xl:   8rem;
+  --space-2xl:  14rem;
+
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
