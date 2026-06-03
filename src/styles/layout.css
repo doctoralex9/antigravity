@@ -1,0 +1,264 @@
+/* ── Shared section pattern ── */
+
+/* Every .section gets generous vertical padding and a max-width container */
+.section {
+  padding: var(--space-2xl) clamp(1.5rem, 5vw, 6rem);
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns by default */
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+/* .section--reverse flips image and text columns — avoids the "same layout every section" monotony */
+.section--reverse .section__media {
+  order: 2;
+}
+.section--reverse .section__content {
+  order: 1;
+}
+
+/* .section--full breaks out of the two-column grid for full-width moments */
+.section--full {
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+/* .section--dark is used for the rooftop full-bleed section */
+.section--dark {
+  position: relative;
+  max-width: 100%;
+  padding: 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section--contact {
+  grid-template-columns: 1fr;
+  background: var(--off-white);
+  max-width: 100%;
+  padding: var(--space-2xl) clamp(1.5rem, 5vw, 6rem);
+}
+
+/* ── Media (image side) ── */
+.section__media {
+  overflow: hidden; /* clips the image scale on hover */
+}
+
+.section__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* portrait — images always taller than wide in this layout */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease-luxury);
+}
+
+.section__media:hover img {
+  transform: scale(1.04);
+}
+
+/* ── Content (text side) ── */
+.section__content {
+  padding: var(--space-md) 0;
+}
+
+.section__content--centered {
+  text-align: center;
+  max-width: 640px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Full-bleed dark section background ── */
+.section__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.section__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 1;
+}
+
+/* ── Typography — used inside sections ── */
+
+/* Small uppercase label above titles — e.g. "The Property", "Dining" */
+.label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.label--light {
+  color: var(--sand);
+}
+
+/* Section titles use Cormorant Garamond — display serif for emotional weight */
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.title em {
+  font-style: italic;
+}
+
+.title--light {
+  color: var(--white);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+.body-text--light {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Cards ── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.card__img {
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+}
+
+.card__img img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-luxury);
+}
+
+.card:hover .card__img img {
+  transform: scale(1.04);
+}
+
+.card__label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.card__title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: var(--space-sm);
+}
+
+/* Text link with animated underline — no button box, luxury doesn't shout */
+.card__link {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aegean);
+  position: relative;
+  display: inline-block;
+}
+
+.card__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--aegean);
+  transition: width 0.4s var(--ease-luxury);
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+/* ── CTA Button ── */
+.cta {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--aegean);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--aegean-light);
+}
+
+/* ── Footer ── */
+#footer {
+  background: var(--text-primary);
+  padding: var(--space-xl) clamp(1.5rem, 5vw, 6rem);
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: var(--space-xs);
+}
+
+.footer__tagline {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Scroll animation initial states ── */
+/* Elements that GSAP will animate — start invisible and offset */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
