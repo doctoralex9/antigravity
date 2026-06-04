@@ -84,6 +84,14 @@
   opacity: 0; /* starts hidden — GSAP will animate this in */
 }
 
+/* ── Mobile hero ── */
+@media (max-width: 767px) {
+  #hero {
+    padding-bottom: var(--space-lg);
+    align-items: flex-end;
+  }
+}
+
 /* Scroll hint — bottom center, fades out as user scrolls */
 .hero__scroll-hint {
   position: absolute;

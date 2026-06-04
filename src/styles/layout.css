@@ -46,12 +46,13 @@
 
 /* ── Media (image side) ── */
 .section__media {
-  overflow: hidden; /* clips the image scale on hover */
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
 }
 
 .section__media img {
   width: 100%;
-  aspect-ratio: 4 / 5; /* portrait — images always taller than wide in this layout */
+  height: 115%;
   object-fit: cover;
   display: block;
   transition: transform 0.8s var(--ease-luxury);
@@ -256,6 +257,40 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.35);
 }
+
+/* ── Tablet (480px – 767px) ── */
+@media (max-width: 767px) {
+
+  .section {
+    grid-template-columns: 1fr;
+    padding: var(--space-lg) clamp(1.5rem, 5vw, 2rem);
+  }
+
+  /* Reset column order — on single-column, image always comes first */
+  .section--reverse .section__media,
+  .section--reverse .section__content {
+    order: unset;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .body-text {
+    max-width: 100%;
+  }
+
+}
+
+/* ── Mobile (< 480px) ── */
+@media (max-width: 479px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 
 /* ── Scroll animation initial states ── */
 

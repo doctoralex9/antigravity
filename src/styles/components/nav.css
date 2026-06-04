@@ -78,3 +78,10 @@
 .nav__cta:hover {
   background: var(--aegean-light);
 }
+
+/* ── Mobile nav ── */
+@media (max-width: 767px) {
+  .nav__links {
+    display: none;
+  }
+}

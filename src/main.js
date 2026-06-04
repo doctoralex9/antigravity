@@ -84,3 +84,19 @@ gsap.utils.toArray('.card').forEach((card, i) => {
   );
 });
 
+// Section image parallax — subtle depth as you scroll past each section
+gsap.utils.toArray('.section__media img').forEach(img => {
+  gsap.fromTo(img,
+    { yPercent: -5 },
+    {
+      yPercent: 5,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img.closest('.section'),
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      }
+    }
+  );
+});
