@@ -47,3 +47,21 @@ gsap.utils.toArray('.reveal').forEach(el => {
     }
   });
 });
+
+// Section image reveals — clip-path wipe from bottom
+gsap.utils.toArray('.section__media').forEach(el => {
+  gsap.fromTo(el,
+    { clipPath: 'inset(100% 0% 0% 0%)' },
+    {
+      clipPath: 'inset(0% 0% 0% 0%)',
+      duration: 1.2,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      }
+    }
+  );
+});
+
