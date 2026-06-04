@@ -65,3 +65,22 @@ gsap.utils.toArray('.section__media').forEach(el => {
   );
 });
 
+// Room cards — staggered reveal
+gsap.utils.toArray('.card').forEach((card, i) => {
+  gsap.fromTo(card,
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 85%',
+        toggleActions: 'play none none none',
+      },
+      delay: i * 0.15,
+    }
+  );
+});
+

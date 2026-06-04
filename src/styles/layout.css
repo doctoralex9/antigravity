@@ -258,8 +258,4 @@
 }
 
 /* ── Scroll animation initial states ── */
-/* Elements that GSAP will animate — start invisible and offset */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-}
+
