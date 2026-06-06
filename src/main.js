@@ -8,6 +8,41 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Mobile hamburger menu
+const hamburger    = document.getElementById('nav-hamburger');
+const overlay      = document.getElementById('nav-overlay');
+const overlayClose = document.getElementById('nav-overlay-close');
+const overlayLinks = document.querySelectorAll('.nav__overlay-link');
+const overlayRes   = document.getElementById('nav-overlay-reserve');
+
+gsap.set(overlay, { clipPath: 'inset(0 0 100% 0)' });
+gsap.set([...overlayLinks, overlayRes], { opacity: 0, y: 24 });
+
+const menuTl = gsap.timeline({ paused: true })
+  .to(overlay, { clipPath: 'inset(0 0 0% 0)', duration: 0.65, ease: 'power3.inOut' })
+  .to([...overlayLinks, overlayRes], {
+    opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.08
+  }, '-=0.25');
+
+const openMenu = () => {
+  overlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  menuTl.play();
+};
+
+const closeMenu = () => {
+  menuTl.reverse();
+  setTimeout(() => {
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }, 650);
+};
+
+hamburger.addEventListener('click', openMenu);
+overlayClose.addEventListener('click', closeMenu);
+overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
+overlayRes.addEventListener('click', closeMenu);
+
 // Nav: add .scrolled class when user scrolls past the hero
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('nav');
