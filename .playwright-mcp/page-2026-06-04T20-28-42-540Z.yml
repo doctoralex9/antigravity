@@ -1,0 +1,110 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Aegean Blue" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+      - list [ref=e5]:
+        - listitem [ref=e6]:
+          - link "Suites" [ref=e7] [cursor=pointer]:
+            - /url: "#rooms"
+        - listitem [ref=e8]:
+          - link "Dining" [ref=e9] [cursor=pointer]:
+            - /url: "#dining"
+        - listitem [ref=e10]:
+          - link "Facilities" [ref=e11] [cursor=pointer]:
+            - /url: "#facilities"
+        - listitem [ref=e12]:
+          - link "Rooftop" [ref=e13] [cursor=pointer]:
+            - /url: "#rooftop"
+      - link "Book Now" [ref=e14] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=e15]:
+    - img "Aegean Blue Hotel" [ref=e17]
+    - generic [ref=e18]:
+      - paragraph [ref=e19]: Greek Island Luxury
+      - heading "Where the Aegean meets stillness" [level=1] [ref=e20]:
+        - text: Where the Aegean
+        - emphasis [ref=e21]: meets stillness
+      - paragraph [ref=e22]: a world-class island retreat, built for those who seek the extraordinary
+    - generic [ref=e23]: Scroll to explore
+  - generic [ref=e24]:
+    - img "Hotel exterior" [ref=e26]
+    - generic [ref=e27]:
+      - paragraph [ref=e28]: The Property
+      - heading "Perched above the deep blue" [level=2] [ref=e29]:
+        - text: Perched above
+        - emphasis [ref=e30]: the deep blue
+      - paragraph [ref=e31]: Built into the clifftop of a private Cycladic peninsula, Aegean Blue commands the horizon. Every terrace, every room, every breath — oriented toward the sea.
+  - generic [ref=e32]:
+    - img "Outdoor facilities" [ref=e34]
+    - generic [ref=e35]:
+      - paragraph [ref=e36]: Outdoor Living
+      - heading "Infinity pools, open courts, cool bars" [level=2] [ref=e37]:
+        - text: Infinity pools,
+        - emphasis [ref=e38]: open courts, cool bars
+      - paragraph [ref=e39]: Three infinity pools cascading toward the sea. A pool bar that never closes before sunset. Tennis and basketball courts wrapped in island light.
+  - generic [ref=e40]:
+    - img "Hotel interior" [ref=e42]
+    - generic [ref=e43]:
+      - paragraph [ref=e44]: Inside
+      - heading "Greek summer refined" [level=2] [ref=e45]:
+        - text: Greek summer
+        - emphasis [ref=e46]: refined
+      - paragraph [ref=e47]: Whitewashed walls, hand-thrown ceramics, linen that moves in the breeze. The interior of Aegean Blue is a living still life — beautiful by doing almost nothing.
+  - generic [ref=e48]:
+    - paragraph [ref=e49]: Suites & Rooms
+    - heading "Your private corner of the island" [level=2] [ref=e50]:
+      - text: Your private
+      - emphasis [ref=e51]: corner of the island
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - img "Clifftop Suite" [ref=e55]
+        - paragraph [ref=e56]: Clifftop Suite
+        - heading "180° sea view, private plunge pool" [level=3] [ref=e57]
+        - link "View Suite" [ref=e58] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e59]:
+        - img "Garden Room" [ref=e61]
+        - paragraph [ref=e62]: Garden Room
+        - heading "Private terrace, olive garden views" [level=3] [ref=e63]
+        - link "View Room" [ref=e64] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e65]:
+        - img "Penthouse" [ref=e67]
+        - paragraph [ref=e68]: The Penthouse
+        - heading "Full floor, rooftop access, butler" [level=3] [ref=e69]
+        - link "View Suite" [ref=e70] [cursor=pointer]:
+          - /url: "#"
+  - generic [ref=e71]:
+    - img "Dining" [ref=e73]
+    - generic [ref=e74]:
+      - paragraph [ref=e75]: Dining
+      - heading "Eight restaurants, one island soul" [level=2] [ref=e76]:
+        - text: Eight restaurants,
+        - emphasis [ref=e77]: one island soul
+      - paragraph [ref=e78]: From the clifftop fine dining room to the pool bar serving mezze at midnight — every meal at Aegean Blue is shaped by the island and the sea around it.
+  - generic [ref=e79]:
+    - img "Amenities" [ref=e81]
+    - generic [ref=e82]:
+      - paragraph [ref=e83]: Amenities
+      - heading "Gym, sauna, and complete stillness" [level=2] [ref=e84]:
+        - text: Gym, sauna,
+        - emphasis [ref=e85]: and complete stillness
+      - paragraph [ref=e86]: A full training facility, traditional hammam, private sauna suites, and a spa built into the cliff face. Everything you need. Nothing you don't.
+  - generic [ref=e87]:
+    - img "Rooftop bar" [ref=e89]
+    - generic [ref=e91]:
+      - paragraph [ref=e92]: The Rooftop
+      - heading "Sunsets above the Aegean" [level=2] [ref=e93]:
+        - text: Sunsets above
+        - emphasis [ref=e94]: the Aegean
+      - paragraph [ref=e95]: The highest point on the island. Cocktails, open air, and a horizon that never gets ordinary. Open from golden hour until the stars take over.
+  - generic [ref=e96]:
+    - paragraph [ref=e97]: Reserve
+    - heading "Begin your stay" [level=2] [ref=e98]
+    - paragraph [ref=e99]: For reservations, private events, and bespoke experiences — our team is available around the clock.
+    - link "Make a Reservation" [ref=e100] [cursor=pointer]:
+      - /url: mailto:stay@aegeanblue.com
+  - contentinfo [ref=e101]:
+    - paragraph [ref=e102]: Aegean Blue
+    - paragraph [ref=e103]: a greek island hotel — est. 2025
